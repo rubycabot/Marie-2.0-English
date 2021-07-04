@@ -18,41 +18,36 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-hoi {}, my name is {}! if you have any questions about how to use me please give me /help... 
+Hoi {}, my name is {}! I'm here to help you to manage your groups.
 
-im a group manager bot maintained by  [my lover](tg://user?id={}).
+Iam a group manager bot maintained by [my lover](tg://user?id={}).
 
-Want to add me in your group? [Click here!](t.me/RubyRias_bot?startgroup=add)
+You can find the list of available commands with /help.
 
-For more commands click /help...
 
-A Mini heart of @RubyRox ❤️
-
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
+**A Mini heart of @RubyRox ❤️**
 
 """
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
+Hello! my name is *{}*.
+I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of the things I can help you with.
 
 *Main* available commands:
  - /start: Start the bot...
  - /help: help....
  - /donate: To find out more about donating!
  - /settings:
-   - in PM: To find out what SETTINGS you have set....
-   - in a group:
+   - in PM : To find out what SETTINGS you have set....
+   - in a group : will redirect you to pm, with all that chat's settings.
 
 {}
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-It took lots of work for [my creator](t.me/SonOfLars) to get me to where I am now, and every donation helps \
-motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \
-(see his bio!). He's just a poor student, so every little helps!
-There are two ways of paying him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+If you want to donate, PM [Ruby🇮🇳](t.me/RubyRox), and ask for donate."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -144,7 +139,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN)
     else:
-        update.effective_message.reply_text("waked up😏😏😏")
+        update.effective_message.reply_text("Hey Bois, Iam Horny 💦🤖")
 
 
 # for test purposes
